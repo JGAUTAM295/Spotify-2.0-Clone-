@@ -102,9 +102,9 @@ function Player() {
                 <ArrowsRightLeftIcon className="button hover: scale-125" />
                 <BackwardIcon className="button hover: scale-125" />
                 {isPlaying ? (
-                    <PauseIcon onClick={handlePlayPause} className="button w-10 h-10 hover: scale-125" />
-                ) : (
                     <PlayIcon onClick={handlePlayPause} className="button w-10 h-10 hover: scale-125" />
+                ) : (
+                    <PauseIcon onClick={handlePlayPause} className="button w-10 h-10 hover: scale-125" />
                 )}
                 <audio id='a1' ref={audioPlayer} src={songInfo?.preview_url} preload="metadata" volume />
 
