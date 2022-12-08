@@ -24,6 +24,7 @@ function Content() {
     const [playlist, setPlaylist] = useRecoilState(playlistState);
     const [defaultPlaylistID, setdefaultPlaylistID] = useState("29HkFTI4hrRdUrvkcUbGWz");
     const spotifyApi = useSpotify();
+
     console.log(defaultPlaylistID);
 
     useEffect(() => {
