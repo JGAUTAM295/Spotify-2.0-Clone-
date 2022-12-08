@@ -50,13 +50,13 @@ export const authOptions = {
                     ...token,
                     accessToken: account.access_token,
                     refreshToken: account.refresh_token,
-                    username: account.providerAccountID,
+                    username: account.providerAccountId,
                     accessTokenExpires: account.expires_at * 1000,
                 };
             }
 
             // Refresh Token
-            //Return previous token if the access token has not expired yet
+            // Return previous token if the access token has not expired yet
             // if (token && token.accessTokenExpires > Date.now()) {
             if (Date.now() < token.accessTokenExpires) {
                 return token;
@@ -78,4 +78,4 @@ export const authOptions = {
     }
 }
 
-export default NextAuth(authOptions)
+export default NextAuth(authOptions);
